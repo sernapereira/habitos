@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.628);
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
