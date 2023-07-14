@@ -60,6 +60,7 @@ const useSuptema = () => {
 
     setForm({
       ...formSub,
+
       [name]: value,
       id: id,
     });
