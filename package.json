@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "env-cmd -f .env vite",
-    "build": "vite build --out build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "build": "vite build --outDir build",
+    "lint": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
