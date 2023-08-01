@@ -14,7 +14,7 @@ const getTemaAction = () => async (dispatch) => {
     return dispatch(getTemas(json.data));
   } catch (error) {
     console.log({ error: error.message });
-    alert(error);
+    alert(error.message);
   }
 };
 
@@ -24,7 +24,7 @@ const getTemaByIdAction = (id) => async (dispatch) => {
     return dispatch(getTemasID(json.data));
   } catch (error) {
     console.log({ error: error.message });
-    alert(error);
+    alert(error.message);
   }
 };
 

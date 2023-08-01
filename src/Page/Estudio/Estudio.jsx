@@ -121,11 +121,16 @@ const Estudio = () => {
         <section className={style.subtema}>
           {temas?.map((tema) => {
             if (tema.id == id) {
-              return tema.subtemas.map((elem, index) => (
+              const subtemasOrdenados = tema.subtemas
+                ? [...tema.subtemas].sort((a, b) => a.id - b.id)
+                : [];
+              return subtemasOrdenados.map((elem, index) => (
                 <div key={index} className={style.subtema__container}>
                   {/* ============================== Title ==================== */}
 
-                  <h1 className={style.subtema__index}>{index + 1}</h1>
+                  <h1 className={style.subtema__index}>
+                    {index + 1} / {elem.id}
+                  </h1>
 
                   <h2
                     key={index}
@@ -152,14 +157,14 @@ const Estudio = () => {
 
                   <div className={style.subtema__codigo}>
                     <h2 className={style.subtema__codigo_title}>Guia : </h2>
-                    <p
+                    <div
                       className={style.subtema__codigo_p}
                       contentEditable={true}
                       onInput={(e) => dataHandler(e, elem.id)}
                       id="codigo"
                     >
                       {elem.codigo}
-                    </p>
+                    </div>
                   </div>
 
                   {/* ========================== ========== ================== */}
