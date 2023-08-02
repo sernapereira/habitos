@@ -9,7 +9,7 @@ import axios from "axios";
 import DWGvisor from "./components/DWGvisor/DWGvisor";
 import FileConverter from "./components/DWGvisor/DWGvisor";
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "http://localhost:3005";
 
 const AppRoutes = () => {
   let routes = useRoutes([
